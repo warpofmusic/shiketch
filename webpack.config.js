@@ -8,7 +8,7 @@ module.exports = {
 	
 	// メインのJS
 	entry: {
-		'balanceSheet':"./src/js/balanceSheet.js",	
+		'script':"./src/js/script.js",	
 	},
 	// 出力ファイル
 	output: {
@@ -17,7 +17,7 @@ module.exports = {
 			export: 'default',
 			type: 'umd',
 		},
-		filename: "./dist/js/balanceSheet.js"
+		filename: "./dist/js/script.js"
 	},
 	module: {
 		rules: [

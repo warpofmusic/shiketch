@@ -1,0 +1,60 @@
+// 変数の定義
+
+// collapse in IE, Edge if width is 100% 
+$liWidthPercent: 99.99%;
+// main heading color
+$headingColor: #FD7D6F;
+$headingTextColor: #FF9966;
+// $headingTextColor: #ec8b96;
+$textColor: #24292e;
+$fff: #fff;
+$borderColor:#eaecef;
+$btnBack :#f8f9fa;
+$btnHover:#e2e6ea;
+// // main color red
+// $mainRedColor: #DC2525;
+
+// min-width
+$breakpoint-up: (
+  'sm': 'screen and (min-width: 400px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 399px)',
+  'md': 'screen and (max-width: 767px)',
+  'lg': 'screen and (max-width: 999px)',
+  'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-min($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-max($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+
+@mixin pcWidth {
+	width: $pc;
+	margin-left: auto;
+	margin-right: auto;
+}
+@mixin spWidth {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;	
+}
+@mixin paddingLR{
+	padding-left: 1em;
+	padding-right: 1em;
+}

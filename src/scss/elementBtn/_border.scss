@@ -1,0 +1,21 @@
+@mixin ini() {
+	display: block;
+	width: 150px;
+	border: 3px solid #999;
+	border-radius: 5px;	
+}
+.elementBtnArea{
+	#toolBorder{
+		span{
+			@include ini(); 
+			width: 100%;
+		}
+	}
+}
+.shiketch_elm_border{
+	position: absolute;
+	top: 10px;
+	z-index: 100;
+	@include ini(); 
+	height: 20px;
+}

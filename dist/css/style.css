@@ -1,0 +1,195 @@
+body, h1, div, h1, h2, ul, li, p {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #24292e;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #FF9966;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clear {
+  clear: both;
+}
+
+.sp_clear {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sp_clear {
+    clear: both;
+  }
+}
+
+.pc_block {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .pc_block {
+    display: none;
+  }
+}
+
+.pc_inline {
+  display: inline;
+}
+
+@media screen and (max-width: 767px) {
+  .pc_inline {
+    display: none;
+  }
+}
+
+.sp_block {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sp_block {
+    display: block;
+  }
+}
+
+.sp_inline {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sp_inline {
+    display: inline;
+  }
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  padding: 20px 0;
+}
+
+header {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+header .btn_area {
+  position: absolute;
+  bottom: 5px;
+  right: 200px;
+  float: right;
+}
+
+header .btn_area h2 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header .btn_area ul {
+  display: inline-block;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+header .btn_area ul li {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #f8f9fa;
+  border-right: 1px solid #eaecef;
+  padding: 3px 20px 5px;
+  background: #f8f9fa;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+header .btn_area ul li:hover {
+  border-color: #e2e6ea;
+  background: #e2e6ea;
+}
+
+.canvasArea {
+  position: relative;
+}
+
+.canvasArea #shiketch {
+  position: relative;
+  outline: 0;
+  margin-top: 0.5em;
+  margin: 10px;
+  padding: 10px;
+  min-height: 75vh;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.canvasArea .elementBtnArea {
+  background: #fff;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  border: 1px solid #eaecef;
+  width: 150px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+}
+
+.canvasArea .elementBtnArea h2 {
+  padding: 5px;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-bottom: 1px solid #eaecef;
+  margin-bottom: 10px;
+}
+
+.canvasArea .elementBtnArea ul li {
+  cursor: pointer;
+  width: calc(100% - 20px);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.canvasArea .elementBtnArea ul li span {
+  height: 25px;
+}
+
+.elementBtnArea #toolBorder span {
+  display: block;
+  width: 150px;
+  border: 3px solid #999;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.shiketch_elm_border {
+  position: absolute;
+  top: 10px;
+  z-index: 100;
+  display: block;
+  width: 150px;
+  border: 3px solid #999;
+  border-radius: 5px;
+  height: 20px;
+}
+/*# sourceMappingURL=style.css.map */

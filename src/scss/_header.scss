@@ -1,0 +1,38 @@
+header{
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid $borderColor;
+	@include paddingLR(); 
+	position: relative;
+	h1{
+		font-size: 2em;
+	}
+	.btn_area{
+		position: absolute;
+		bottom: 5px;
+		right: 200px;
+		float: right;
+		h2{
+			display: inline-block;
+			margin-right: 10px;
+		}
+		ul{
+			display: inline-block;
+			background: $btnBack;
+			border-radius: 6px;
+			li{
+				display: inline-block;
+				cursor: pointer;
+				border: 1px solid $btnBack;
+				border-right: 1px solid $borderColor;
+				padding: 3px 20px 5px;
+				background: $btnBack;
+				font-size: 0.8em;
+				margin: 0;
+				&:hover{
+					border-color: $btnHover;
+					background: $btnHover;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Shiketch</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<h1>Shiketch</h1>	
+		<nav>
+			<div class="btn_area">
+				<h2>export:</h2>
+				<ul>
+					<li id="btnExportImg">img</li>
+					<!-- <li>json</li> -->
+				</ul>
+			</div>
+		</nav>	
+	</header>
+	<section class="canvasArea">
+		<div id="shiketch" contenteditable="true">
+		</div>
+		<div class="elementBtnArea">
+			<h2>tool</h2>
+			<ul>
+				<li id="toolBorder"><span></span></li>
+			</ul>
+		</div>	
+	</section>
+
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+</html>
