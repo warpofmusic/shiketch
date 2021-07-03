@@ -1,17 +1,24 @@
-const EventEmitter = require("events");
 let ArtBoard = {
 	shiketch : {},
-	bord : {},
+	board : {},
 	moveable:null,
+	/**
+	 * アートボードのリサイズをコントロールする
+	 */
 	controle:function(){
 		if(ArtBoard.moveable == null){
+			//moveableを起動
 			ArtBoard.setMoveable();
-
 		}else{
+			//moveableを終了
 			ArtBoard.moveable.destroy();
 			ArtBoard.moveable = null;
 		}
 	},
+	/**
+	 * moveableを起動する
+	 * メモリを軽くする為に起動する度に毎回moveableを作成する。
+	 */
 	setMoveable:function(){
 		//アートボードをリサイズできるようにする
 	 	ArtBoard.moveable = new Moveable(ArtBoard.shiketch, {
@@ -19,7 +26,7 @@ let ArtBoard = {
 			draggable: true,
 			edgeDraggable:true,
 		});
-		ArtBoard.moveable.target = ArtBoard.bord;
+		ArtBoard.moveable.target = ArtBoard.board;
 		const frame = {
 		    translate: [0, 0],
 		};
@@ -38,11 +45,17 @@ let ArtBoard = {
 		    target.style.transform = transform;
 		});
 	},
-	eventListener:function(shiketch,bord,em){
-		ArtBoard.bord = bord;
+	/**
+	 * アートボードのイベント受付と初期化
+	 * @param  elm shiketch
+	 * @param  elm board    アートボード
+	 * @param  EventEmitter em
+	 */
+	eventListener:function(shiketch,board,em){
+		ArtBoard.board = board;
 		ArtBoard.shiketch = shiketch;
 		ArtBoard.em = em;
-		em.on('ArtBoard.controle',function(){
+		em.on('shiketch.dblClick',function(){
 			ArtBoard.controle();
 		});
 	},
