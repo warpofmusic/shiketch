@@ -9,6 +9,7 @@ body{
 
 .canvasArea{
 	position: relative;
+	background: #eee;
 	#shiketch{
 		position: relative;
 		outline: 0;
@@ -17,6 +18,10 @@ body{
 		padding: 10px;
 		min-height: 75vh;
 		@include paddingLR(); 
+		#bord{
+			background: #fff;
+			outline: 0;
+		}
 	}
 	.elementBtnArea{
 		background: $fff;
