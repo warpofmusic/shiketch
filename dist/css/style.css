@@ -147,6 +147,7 @@ header .btn_area ul li:hover {
 .canvasArea #shiketch #board {
   background: #fff;
   outline: 0;
+  overflow: hidden;
 }
 
 .canvasArea .elementBtnArea {
