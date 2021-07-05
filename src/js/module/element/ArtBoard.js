@@ -15,6 +15,12 @@ let ArtBoard = {
 			ArtBoard.moveable = null;
 		}
 	},
+	destroy:function(){
+		if(ArtBoard.moveable != null){
+			ArtBoard.moveable.destroy();
+			ArtBoard.moveable = null;
+		}
+	},
 	/**
 	 * moveableを起動する
 	 * メモリを軽くする為に起動する度に毎回moveableを作成する。
@@ -58,6 +64,9 @@ let ArtBoard = {
 		em.on('shiketch.dblClick',function(){
 			ArtBoard.controle();
 		});
+		em.on('dblClick.destroy',function(){
+			ArtBoard.destroy();
+		})
 	},
 };
 

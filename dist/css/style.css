@@ -199,4 +199,16 @@ header .btn_area ul li:hover {
   border-radius: 5px;
   height: 20px;
 }
+
+.shiketch_elm_figure {
+  position: absolute;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+}
+
+.shiketch_elm_figure img {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=style.css.map */

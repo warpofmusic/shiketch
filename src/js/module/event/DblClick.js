@@ -10,7 +10,8 @@ let DblClick = {
 		DblClick.em = em;
 		document.addEventListener('dblclick',function(e){
 			let targElm = e.path[0];
-			DblClick.em.emit(targElm.getAttribute('data-elmtype')+'.dblClick');
+			DblClick.em.emit('dblClick.destroy',targElm);
+			DblClick.em.emit(targElm.getAttribute('data-elmtype')+'.dblClick',targElm);
 		})
 	}
 };
