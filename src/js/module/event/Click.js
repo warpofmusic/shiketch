@@ -10,6 +10,7 @@ let Click = {
 		Click.em = em;
 		document.addEventListener('click',function(e){
 			let targElm = e.path[0];
+			console.log(targElm);
 			Click.em.emit(targElm.getAttribute('data-elmtype')+'.click',targElm);
 		})
 	}

@@ -8,6 +8,7 @@ import paste from './module/event/Paste.js';
 //エレメント
 import artBoard from './module/element/ArtBoard.js';
 import image from './module/element/Image.js';
+import square from './module/element/Square.js';
 
 const em = new EventEmitter();
 
@@ -18,6 +19,8 @@ const board = document.getElementById("board");
 //アートボードのイベントを登録
 artBoard.eventListener(shiketch,board,em);
 image.eventListener(board,em);
+square.eventListener(board,em);
+
 //画像出力のイベント登録
 downLoadImg.eventListener(shiketch,board);
 //ダブルクリックイベントの登録
@@ -28,12 +31,3 @@ paste.eventListener(em);
 
 //ダブルクリックされた要素全てを格納　こいつが2個あったら
 //アートボードをDBクリックされた事になるから、moveableを起動しない
-
-
-
-var toolBorderBtn = document.getElementById('toolBorder');
-toolBorderBtn.addEventListener("click",() => {
-	let span = document.createElement("span");
-	span.classList.add('shiketch_elm_border');
-	board.appendChild(span);
-})

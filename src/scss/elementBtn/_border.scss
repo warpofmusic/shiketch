@@ -12,10 +12,11 @@
 		}
 	}
 }
-.shiketch_elm_border{
+.shiketch_elm_square{
 	position: absolute;
 	top: 10px;
 	z-index: 100;
 	@include ini(); 
+	border: 5px solid #f00;
 	height: 20px;
 }
